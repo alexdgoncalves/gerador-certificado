@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  gerador-certificado:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gerador-certificado
+    expose:
+      - "4200"
+    restart: unless-stopped
