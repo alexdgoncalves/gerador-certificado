@@ -1,4 +1,4 @@
-FROM node:24.13.0-bookworm-slim AS build
+﻿FROM node:24.13.0-bookworm-slim AS build
 
 WORKDIR /app
 
@@ -15,6 +15,6 @@ FROM nginx:1.27-alpine AS runtime
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/dist/gerador-certificado/browser /usr/share/nginx/html
 
-EXPOSE 4200
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
