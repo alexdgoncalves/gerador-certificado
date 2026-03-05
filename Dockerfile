@@ -15,6 +15,6 @@ FROM nginx:1.27-alpine AS runtime
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/dist/gerador-certificado/browser /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 4200
 
 CMD ["nginx", "-g", "daemon off;"]
