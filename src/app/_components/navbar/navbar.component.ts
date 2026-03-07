@@ -1,20 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { NgClass } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive, NgClass],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit {
-
-  ngOnInit(): void {
-    this.mensagem();
-  }
-
-  mensagem(): void {
-    console.log("Meu componente navbar inicializou");
-  }
-
+export class NavbarComponent {
 }

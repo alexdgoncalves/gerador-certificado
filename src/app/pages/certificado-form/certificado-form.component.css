@@ -98,3 +98,7 @@ label {
 .custom-input-group:has(.error-message) > label {
   color: #d71d1d;
 }
+
+.text-danger {
+  color: #d71d1d;
+}
